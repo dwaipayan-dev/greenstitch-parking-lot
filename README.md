@@ -23,6 +23,7 @@ park vehicle_id color: Here vehicle_id and color are both strings, this command 
 leave slot_number: Here, slot_number is the slot number which will be vacated if the parking lot exists.
 status: Here, a table with all the parked cars will be printed
 registration_numbers_for_cars_with_colour color: This will print the registration id(vehicle_id) of all the vehicles with the color of String color
-reset: This will purge all the data of parking lot and will reset it so you can create another parking lot.
+reset: This will purge all the data of parking lot and will reset it so you can create another parking lot. This query also exits the terminal so you have to restart the program
+
 
 All the commands return INVALID QUERY when called out of sequence.
