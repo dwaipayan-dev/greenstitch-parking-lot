@@ -2,11 +2,10 @@ package com.assignment.greenstich.application.Entities;
 
 import com.assignment.greenstich.application.Enums.SlotStatus;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -14,15 +13,11 @@ import jakarta.persistence.Table;
 @Table(name = "slot")
 public class Slot {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private int id;
+    @Column(name = "slot_number")
+    private int slotNumber;
 
     @Enumerated(EnumType.STRING)
     private SlotStatus status;
-
-    public int getId() {
-        return id;
-    }
 
     public SlotStatus getStatus() {
         return status;
@@ -32,13 +27,26 @@ public class Slot {
         this.status = status;
     }
 
-    @Override
-    public String toString() {
-        return "Slot [id=" + id + ", status=" + status + "]";
+
+    public int getSlotNumber() {
+        return slotNumber;
     }
 
-    public Slot(SlotStatus status) {
-        this.status = status;
+    public void setSlotNumber(int slotNumber) {
+        this.slotNumber = slotNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "Slot [slotNumber=" + slotNumber + ", status=" + status + "]";
+    }
+
+    public Slot(int slotNumber) {
+        this.slotNumber = slotNumber;
+        this.status = SlotStatus.AVAILABLE;
+    }
+
+    public Slot() {
     }
 
 }
