@@ -18,12 +18,14 @@
 
 Following is the description of the commands:
 
-create_parking_lot n: Here n is the number of slots in parking lot. This will create a parking lot if no other parking lot exits in DB.
-park vehicle_id color: Here vehicle_id and color are both strings, this command when a parking lot exists will park the carin the nearest slot(least slot number). 
-leave slot_number: Here, slot_number is the slot number which will be vacated if the parking lot exists.
-status: Here, a table with all the parked cars will be printed
-registration_numbers_for_cars_with_colour color: This will print the registration id(vehicle_id) of all the vehicles with the color of String color
-reset: This will purge all the data of parking lot and will reset it so you can create another parking lot. This query also exits the terminal so you have to restart the program
+1. create_parking_lot n: Here n is the number of slots in parking lot. This will create a parking lot if no other parking lot exits in DB.
+2. park vehicle_id color: Here vehicle_id and color are both strings, this command when a parking lot exists will park the carin the nearest slot(least slot number). 
+3. leave slot_number: Here, slot_number is the slot number which will be vacated if the parking lot exists.
+4. status: Here, a table with all the parked cars will be printed
+5. registration_numbers_for_cars_with_colour color: This will print the registration id(vehicle_id) of all the vehicles with the color of String color
+6. reset: This will purge all the data of parking lot and will reset it so you can create another parking lot. This query also exits the terminal so you have to restart the program
+
+7. exit: exits the terminal
 
 
 All the commands return INVALID QUERY when called out of sequence.
